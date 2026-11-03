@@ -1,6 +1,6 @@
 import { Helmet } from '@dr.pogodin/react-helmet';
 import { motion } from 'motion/react';
-import { Bell, RefreshCw, TrendingUp, ChevronDown } from 'lucide-react';
+import { Bell, RefreshCw, TrendingUp, ChevronDown, Coffee } from 'lucide-react';
 import { useState } from 'react';
 import home from '../content/home.json';
 
@@ -353,13 +353,27 @@ export default function HomePage() {
             >
               <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-primary mb-6">
                 <span className="h-2 w-2 rounded-full" style={{ background: 'hsl(var(--accent))' }} />
-                Coming soon to Android and Windows
+                Free on Windows
               </p>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-5">{home.cta.heading}</h2>
               <p className="text-base md:text-lg text-muted-foreground mb-10">{home.cta.subtext}</p>
-              <a href="mailto:support@homebill.eu" className="button-primary px-8 py-4 text-base">
-                {home.cta.button}
-              </a>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <a
+                  href="https://buymeacoffee.com/tomadalexau"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button-primary px-8 py-4 text-base"
+                >
+                  <Coffee size={18} aria-hidden="true" />
+                  {home.cta.button}
+                </a>
+                <a
+                  href="mailto:support@homebill.eu"
+                  className="button-primary px-8 py-4 text-base"
+                >
+                  {home.cta.contactButton}
+                </a>
+              </div>
             </motion.div>
           </div>
         </section>

@@ -2,7 +2,7 @@
   "hero": {
     "headline": "Bills under control. Home feels easier.",
     "subtext": "Keep recurring bills, due dates, reminders, income, and expenses together. See what is coming up and understand your household cash flow.",
-    "cta": "Coming soon",
+    "cta": "See how to support HomeBill",
     "reassurance": "A clear view of your bills, with you in control."
   },
   "features": {
@@ -69,8 +69,9 @@
     ]
   },
   "cta": {
-    "heading": "A calmer view of what is due",
-    "subtext": "HomeBill is getting ready for its first store releases. Check back for the official download links, or get in touch with a question.",
-    "button": "Contact HomeBill"
+    "heading": "Help bring HomeBill to more platforms",
+    "subtext": "HomeBill is free on Windows. If you find it useful, an optional one-time tip helps support ongoing development and the work of publishing on additional platforms. There’s no obligation, and future releases depend on development and approval by the relevant stores.",
+    "button": "Support HomeBill",
+    "contactButton": "Contact HomeBill"
   }
 }
