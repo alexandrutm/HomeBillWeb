@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "headline": "Bills under control. Home feels easier.",
+    "subtext": "Keep recurring bills, due dates, reminders, income, and expenses together. See what is coming up and understand your household cash flow.",
+    "cta": "Coming soon",
+    "reassurance": "A clear view of your bills, with you in control."
+  },
+  "features": {
+    "heading": "A little more clarity for everyday finances",
+    "items": [
+      {
+        "id": "feat-1",
+        "title": "Bill reminders",
+        "description": "Keep upcoming and overdue bills in view. On supported phones, optional local reminders can help you remember a due date."
+      },
+      {
+        "id": "feat-2",
+        "title": "Monthly and yearly bills",
+        "description": "Set up recurring monthly or annual bills, including fixed, estimated, or variable amounts, and see their upcoming due dates."
+      },
+      {
+        "id": "feat-3",
+        "title": "Cash-flow overview",
+        "description": "Review income, recorded expenses, and expected bills by month or year. Forecasts are shown separately from actuals."
+      }
+    ]
+  },
+  "about": {
+    "heading": "Made for the bills real homes have",
+    "body": [
+      {
+        "id": "ab-1",
+        "text": "HomeBill is a personal bill and budget app for keeping household payments, dates, income, and expenses in one place. It is designed to make the next bill and the bigger monthly picture easier to understand."
+      },
+      {
+        "id": "ab-2",
+        "text": "Add your own bills and transactions, then use the monthly and yearly views to see what is due and how the numbers add up. HomeBill helps you keep track; you stay in charge of payment decisions."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "A few things you might be wondering",
+    "items": [
+      {
+        "id": "faq-1",
+        "question": "When can I get HomeBill?",
+        "answer": "HomeBill is being prepared for release. Store links will be added here when the Android and Windows versions are available."
+      },
+      {
+        "id": "faq-2",
+        "question": "Does HomeBill pay bills for me?",
+        "answer": "No. HomeBill helps you track bills and due dates; it does not initiate payments."
+      },
+      {
+        "id": "faq-3",
+        "question": "Can I track annual bills as well as monthly ones?",
+        "answer": "Yes. HomeBill supports recurring monthly and annual bills, with fixed, estimated, or variable amounts."
+      },
+      {
+        "id": "faq-4",
+        "question": "How do reminders work?",
+        "answer": "Optional local reminders are available on supported Android and iOS devices. Windows and other desktop versions show due dates in the app but do not schedule local alerts."
+      },
+      {
+        "id": "faq-5",
+        "question": "Does HomeBill connect to my bank?",
+        "answer": "HomeBill is built around bills and transactions that you enter and manage in the app. Bank connections are not part of the current release."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "A calmer view of what is due",
+    "subtext": "HomeBill is getting ready for its first store releases. Check back for the official download links, or get in touch with a question.",
+    "button": "Contact HomeBill"
+  }
+}
