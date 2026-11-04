@@ -1,4 +1,4 @@
-import { Home, Menu, X } from 'lucide-react';
+import { Coffee, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Header() {
@@ -6,16 +6,17 @@ export default function Header() {
 
   const navLinks = [
     { href: '#features', label: 'Features' },
+    { href: '/guides/', label: 'Guides' },
     { href: '#about', label: 'About' },
     { href: '#faq', label: 'FAQ' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#availability', label: 'Contact' },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 h-[4.5rem] flex items-center justify-between">
         <a href="/" className="flex items-center gap-2.5 shrink-0" aria-label="HomeBill home">
-          <span className="brand-mark"><Home size={19} strokeWidth={2.2} /></span>
+          <img src="/homebill-icon.svg" alt="" className="h-9 w-9 rounded-xl" />
           <span className="font-heading text-xl font-bold tracking-tight text-primary">HomeBill</span>
         </a>
 
@@ -30,10 +31,13 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#availability"
+            href="https://buymeacoffee.com/tomadalexau"
+            target="_blank"
+            rel="noopener noreferrer"
             className="button-primary px-4 py-2.5 text-sm"
           >
-            Coming soon
+            <Coffee size={16} aria-hidden="true" />
+            <span className="ml-2">Buy me a coffee</span>
           </a>
         </nav>
 
@@ -60,11 +64,14 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#availability"
+            href="https://buymeacoffee.com/tomadalexau"
+            target="_blank"
+            rel="noopener noreferrer"
             className="button-primary justify-center px-4 py-3 text-sm"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Coming soon
+            <Coffee size={16} aria-hidden="true" />
+            <span className="ml-2">Buy me a coffee</span>
           </a>
         </nav>
       )}

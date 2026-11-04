@@ -7,14 +7,10 @@ export default function Footer() {
     <footer style={{ background: 'hsl(var(--primary))' }}>
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
-          {/* Logo + tagline */}
           <div className="flex flex-col items-center md:items-start gap-3">
-            <a href="/">
-              <img
-                src="/airo-assets/images/logo/horizontal/dark"
-                alt="HomeBill"
-                className="block h-auto max-h-9 w-auto max-w-full object-contain"
-              />
+            <a href="/" className="flex items-center gap-2.5" aria-label="HomeBill home">
+              <img src="/homebill-icon.svg" alt="" className="h-9 w-9 rounded-xl" />
+              <span className="font-heading text-xl font-bold text-white">HomeBill</span>
             </a>
             <p className="text-sm" style={{ color: 'hsl(var(--primary-foreground) / 0.75)' }}>
               Bills under control. Home feels easier.
@@ -39,6 +35,22 @@ export default function Footer() {
               style={{ color: 'hsl(var(--primary-foreground) / 0.85)' }}
             >
               homebill.eu
+            </a>
+            <a
+              href="/guides/"
+              className="text-sm transition-opacity hover:opacity-80"
+              style={{ color: 'hsl(var(--primary-foreground) / 0.85)' }}
+            >
+              Guides
+            </a>
+            <a
+              href="https://buymeacoffee.com/tomadalexau"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm transition-opacity hover:opacity-80"
+              style={{ color: 'hsl(var(--primary-foreground) / 0.85)' }}
+            >
+              Buy me a coffee
             </a>
           </div>
         </div>

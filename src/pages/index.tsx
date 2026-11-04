@@ -176,11 +176,21 @@ export default function HomePage() {
                 {home.hero.subtext}
               </p>
               <a
-                href="#availability"
+                href="https://buymeacoffee.com/tomadalexau"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="button-primary px-8 py-4 text-base"
               >
-                {home.hero.cta}
+                <Coffee size={18} aria-hidden="true" />
+                <span className="ml-2">{home.hero.cta}</span>
               </a>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Looking for practical tips?{' '}
+                <a href="/guides/" className="font-semibold text-primary underline underline-offset-4">
+                  Browse our free guides
+                </a>
+                .
+              </p>
             </motion.div>
 
             {/* Reassurance strip */}
@@ -261,6 +271,42 @@ export default function HomePage() {
                 })}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ── GUIDES ───────────────────────────────────────────────────────── */}
+        <section id="guides" className="py-24 md:py-32" style={{ background: 'hsl(var(--muted) / 0.18)' }}>
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="mx-auto mb-12 max-w-2xl text-center">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-primary">Practical household finance</p>
+              <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">Helpful guides for keeping bills in view</h2>
+              <p className="text-base leading-relaxed text-muted-foreground">
+                Straightforward ways to plan for annual costs, handle changing bills, and understand what is due versus what you have paid.
+              </p>
+            </div>
+            <div className="grid gap-5 md:grid-cols-3">
+              <a href="/guides/plan-for-annual-bills/" className="rounded-2xl border border-border bg-card p-7 transition-shadow hover:shadow-lg">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-primary">Planning</p>
+                <h3 className="mb-3 text-xl font-bold text-foreground">How to plan for annual bills in a monthly budget</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">Turn once-a-year expenses into a clearer monthly plan, with a simple worked example.</p>
+                <span className="mt-5 inline-block text-sm font-semibold text-primary">Read the guide →</span>
+              </a>
+              <a href="/guides/track-variable-household-bills/" className="rounded-2xl border border-border bg-card p-7 transition-shadow hover:shadow-lg">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-primary">Bill tracking</p>
+                <h3 className="mb-3 text-xl font-bold text-foreground">How to keep track of variable household bills</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">Use estimates and actual amounts carefully when a utility bill changes from month to month.</p>
+                <span className="mt-5 inline-block text-sm font-semibold text-primary">Read the guide →</span>
+              </a>
+              <a href="/guides/upcoming-bills-vs-paid-expenses/" className="rounded-2xl border border-border bg-card p-7 transition-shadow hover:shadow-lg">
+                <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-primary">Cash flow</p>
+                <h3 className="mb-3 text-xl font-bold text-foreground">Upcoming bills versus expenses already paid</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">Learn why expected payments and recorded spending answer different questions.</p>
+                <span className="mt-5 inline-block text-sm font-semibold text-primary">Read the guide →</span>
+              </a>
+            </div>
+            <p className="mt-8 text-center text-sm text-muted-foreground">
+              General educational information only; not financial advice.
+            </p>
           </div>
         </section>
 
