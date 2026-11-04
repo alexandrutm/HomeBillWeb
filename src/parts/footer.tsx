@@ -44,6 +44,13 @@ export default function Footer() {
               Guides
             </a>
             <a
+              href="/privacy-policy/"
+              className="text-sm transition-opacity hover:opacity-80"
+              style={{ color: 'hsl(var(--primary-foreground) / 0.85)' }}
+            >
+              Privacy Policy
+            </a>
+            <a
               href="https://buymeacoffee.com/tomadalexau"
               target="_blank"
               rel="noopener noreferrer"
