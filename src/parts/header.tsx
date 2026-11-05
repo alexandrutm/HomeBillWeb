@@ -9,7 +9,7 @@ export default function Header() {
     { href: '/guides/', label: 'Guides' },
     { href: '#about', label: 'About' },
     { href: '#faq', label: 'FAQ' },
-    { href: '#availability', label: 'Contact' },
+    { href: '#availability', label: 'Download' },
   ];
 
   return (

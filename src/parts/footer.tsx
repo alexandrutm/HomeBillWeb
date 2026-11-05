@@ -1,5 +1,5 @@
-import { Download, Mail } from 'lucide-react';
-import { windowsStoreUrl } from '../content/store-links';
+import { Download } from 'lucide-react';
+import { windowsStoreUrl, windowsStoreWebUrl } from '../content/store-links';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,14 +20,6 @@ export default function Footer() {
 
           {/* Links */}
           <div className="flex flex-col items-center md:items-end gap-3">
-            <a
-              href="mailto:hello@homebill.eu"
-              className="flex items-center gap-2 text-sm transition-opacity hover:opacity-80"
-              style={{ color: 'hsl(var(--primary-foreground) / 0.85)' }}
-            >
-              <Mail size={15} />
-              hello@homebill.eu
-            </a>
             <a
               href="https://homebill.eu"
               target="_blank"
@@ -54,6 +46,15 @@ export default function Footer() {
               <Download size={15} />
               Download for Windows
             </a>
+              <a
+                href={windowsStoreWebUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm transition-opacity hover:opacity-80"
+                style={{ color: 'hsl(var(--primary-foreground) / 0.85)' }}
+              >
+                Microsoft Store listing
+              </a>
             <a
               href="/privacy-policy/"
               className="text-sm transition-opacity hover:opacity-80"

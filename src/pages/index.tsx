@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { Bell, RefreshCw, TrendingUp, ChevronDown, Coffee, Download } from 'lucide-react';
 import { useState } from 'react';
 import home from '../content/home.json';
-import { windowsStoreUrl } from '../content/store-links';
+import { windowsStoreUrl, windowsStoreWebUrl } from '../content/store-links';
 
 // ─── Geometric house SVG accent ───────────────────────────────────────────────
 function HouseAccent({ className }: { className?: string }) {
@@ -37,7 +37,7 @@ function HouseAccent({ className }: { className?: string }) {
 // ─── Feature icons ─────────────────────────────────────────────────────────────
 const featureIcons = [Bell, RefreshCw, TrendingUp];
 
-// ─── Mock app UI ───────────────────────────────────────────────────────────────
+// ─── Illustrative app preview ──────────────────────────────────────────────────
 function MockAppUI() {
   const bills = [
     { name: 'Electricity', amount: '€ 68', due: 'Due in 3 days', urgent: true },
@@ -123,6 +123,7 @@ export default function HomePage() {
   const siteUrl = 'https://homebill.eu';
   const title = 'HomeBill — Bills under control. Home feels easier.';
   const description = 'Track recurring bills, payment dates, reminders, income, and expenses in one calm, simple place. No bank connections. No automatic payments.';
+  const shareImage = `${siteUrl}/homebill-og.png`;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -141,14 +142,19 @@ export default function HomePage() {
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <link rel="canonical" href={siteUrl} />
+        <link rel="canonical" href={`${siteUrl}/`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={siteUrl} />
+        <meta property="og:url" content={`${siteUrl}/`} />
+        <meta property="og:image" content={shareImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="HomeBill — bills under control. Home feels easier." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={shareImage} />
         <script type="application/ld+json">{JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>
       </Helmet>
 
@@ -156,15 +162,15 @@ export default function HomePage() {
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden py-24 md:py-32">
           {/* Geometric accent — top right */}
-          <div className="absolute -top-16 -right-16 w-80 h-80 opacity-40 pointer-events-none" aria-hidden="true">
+          <div className="absolute -top-16 -right-16 z-0 hidden h-80 w-80 opacity-10 pointer-events-none xl:block" aria-hidden="true">
             <HouseAccent className="w-full h-full" />
           </div>
           {/* Small accent — bottom left */}
-          <div className="absolute bottom-0 -left-10 w-48 h-48 opacity-20 pointer-events-none" aria-hidden="true">
+          <div className="absolute bottom-0 -left-10 z-0 hidden h-48 w-48 opacity-10 pointer-events-none xl:block" aria-hidden="true">
             <HouseAccent className="w-full h-full" />
           </div>
 
-          <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -186,6 +192,18 @@ export default function HomePage() {
                 <Download size={18} aria-hidden="true" />
                 <span className="ml-2">{home.hero.cta}</span>
               </a>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Store app not opening?{' '}
+                <a
+                  href={windowsStoreWebUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-primary underline underline-offset-4"
+                >
+                  View the Microsoft Store listing in your browser
+                </a>
+                .
+              </p>
               <p className="mt-4 text-sm text-muted-foreground">
                 Looking for practical tips?{' '}
                 <a href="/guides/" className="font-semibold text-primary underline underline-offset-4">
@@ -332,7 +350,7 @@ export default function HomePage() {
                   Keep upcoming bills and payment status together, then compare recorded transactions with expected bills in your monthly and yearly cash-flow view.
                 </p>
                 <a href="#availability" className="button-primary px-6 py-3 text-sm">
-                  See release plans
+                  Get HomeBill for Windows
                 </a>
               </motion.div>
 
@@ -343,8 +361,8 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' as const }}
               >
                 <MockAppUI />
-                <p className="mt-3 text-center text-xs" style={{ color: 'hsl(var(--primary-foreground) / 0.55)' }}>
-                  Illustrative preview. Example amounts and bills are not actual user data.
+                <p className="mt-3 text-center text-xs" style={{ color: 'hsl(var(--primary-foreground) / 0.75)' }}>
+                  Illustrative mock-up, not a screenshot of the current app. All names, dates, and amounts are fictional examples.
                 </p>
               </motion.div>
             </div>
@@ -417,6 +435,14 @@ export default function HomePage() {
                   {home.cta.downloadButton}
                 </a>
                 <a
+                  href={windowsStoreWebUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="self-center px-4 py-4 text-sm font-semibold text-primary underline underline-offset-4"
+                >
+                  View Store listing in browser
+                </a>
+                <a
                   href="https://buymeacoffee.com/tomadalexau"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -424,12 +450,6 @@ export default function HomePage() {
                 >
                   <Coffee size={18} aria-hidden="true" />
                   {home.cta.button}
-                </a>
-                <a
-                  href="mailto:support@homebill.eu"
-                  className="button-primary px-8 py-4 text-base"
-                >
-                  {home.cta.contactButton}
                 </a>
               </div>
             </motion.div>
