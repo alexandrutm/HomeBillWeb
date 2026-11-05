@@ -1,4 +1,5 @@
-import { Mail } from 'lucide-react';
+import { Download, Mail } from 'lucide-react';
+import { windowsStoreUrl } from '../content/store-links';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -42,6 +43,16 @@ export default function Footer() {
               style={{ color: 'hsl(var(--primary-foreground) / 0.85)' }}
             >
               Guides
+            </a>
+            <a
+              href={windowsStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm transition-opacity hover:opacity-80"
+              style={{ color: 'hsl(var(--primary-foreground) / 0.85)' }}
+            >
+              <Download size={15} />
+              Download for Windows
             </a>
             <a
               href="/privacy-policy/"

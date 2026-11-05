@@ -1,8 +1,9 @@
 import { Helmet } from '@dr.pogodin/react-helmet';
 import { motion } from 'motion/react';
-import { Bell, RefreshCw, TrendingUp, ChevronDown, Coffee } from 'lucide-react';
+import { Bell, RefreshCw, TrendingUp, ChevronDown, Coffee, Download } from 'lucide-react';
 import { useState } from 'react';
 import home from '../content/home.json';
+import { windowsStoreUrl } from '../content/store-links';
 
 // ─── Geometric house SVG accent ───────────────────────────────────────────────
 function HouseAccent({ className }: { className?: string }) {
@@ -176,12 +177,13 @@ export default function HomePage() {
                 {home.hero.subtext}
               </p>
               <a
-                href="https://buymeacoffee.com/tomadalexau"
+                href={windowsStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button-primary px-8 py-4 text-base"
+                aria-label="Download HomeBill for Windows from the Microsoft Store"
               >
-                <Coffee size={18} aria-hidden="true" />
+                <Download size={18} aria-hidden="true" />
                 <span className="ml-2">{home.hero.cta}</span>
               </a>
               <p className="mt-4 text-sm text-muted-foreground">
@@ -404,6 +406,16 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-5">{home.cta.heading}</h2>
               <p className="text-base md:text-lg text-muted-foreground mb-10">{home.cta.subtext}</p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <a
+                  href={windowsStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button-primary px-8 py-4 text-base"
+                  aria-label="Get HomeBill from the Microsoft Store"
+                >
+                  <Download size={18} aria-hidden="true" />
+                  {home.cta.downloadButton}
+                </a>
                 <a
                   href="https://buymeacoffee.com/tomadalexau"
                   target="_blank"
